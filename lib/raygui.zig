@@ -102,11 +102,13 @@ pub const StyleProperty = union(enum) {
     _5: void,
     _6: void,
     _7: void,
-    _8: void,
+    dropdown: DropdownBoxProperty,
     _9: void,
     _10: void,
     _11: void,
     listview: ListViewProperty,
+    _13: void,
+    scrollbar: ScrollBarProperty,
 };
 
 pub const ToggleProperty = enum(c_int) {
