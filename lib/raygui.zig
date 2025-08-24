@@ -446,6 +446,11 @@ pub fn setStyle(control: Control, comptime property: StyleProperty, value: i32) 
     cdef.GuiSetStyle(control, property_int, @as(c_int, value));
 }
 
+/// Set one style property
+pub fn rawSetStyle(control: Control, property_int: c_int, value: i32) void {
+    cdef.GuiSetStyle(control, property_int, @as(c_int, value));
+}
+
 /// Get one style property
 pub fn getStyle(control: Control, comptime property: StyleProperty) i32 {
     const property_int: c_int = switch (property) {
